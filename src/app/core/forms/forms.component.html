@@ -1,0 +1,15 @@
+<form class="box" [formGroup]="employee">
+  <div>
+    <div fxFlex="100%" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%">
+        <mat-label fxFlex="40%"  fxLayoutAlign="start center" class="form-name">name:</mat-label>
+        <mat-form-field fxFlex="60%" appearance="outline">
+          <input matInput placeholder="Arul" formControlName="id">
+          <!-- <mat-error *ngIf="employee?.get('firstname')?.hasError('required')">Enter Correct Value</mat-error>
+          <mat-error *ngIf="employee?.get('firstname')?.hasError('pattern')">Enter Correct Value</mat-error> -->
+        </mat-form-field>
+      </div>
+
+    </div>
+  </div>
+</form>
