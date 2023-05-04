@@ -7,6 +7,7 @@ import { OneInterpolationComponent } from './core/one-interpolation/one-interpol
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
 
   ],
   providers: [],

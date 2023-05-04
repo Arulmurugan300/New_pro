@@ -2,13 +2,23 @@
   <div>
     <div fxFlex="100%" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
       <div fxLayout="row" fxFlex="50%">
-        <mat-label fxFlex="40%"  fxLayoutAlign="start center" class="form-name">name:</mat-label>
-        <mat-form-field fxFlex="60%" appearance="outline">
-          <input matInput placeholder="Arul" formControlName="id">
-          <!-- <mat-error *ngIf="employee?.get('firstname')?.hasError('required')">Enter Correct Value</mat-error>
-          <mat-error *ngIf="employee?.get('firstname')?.hasError('pattern')">Enter Correct Value</mat-error> -->
+        <mat-label fxFlex="40%" fxLayoutAlign="start center" class="form-name">role:</mat-label>
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="name">
+            <mat-option *ngFor="let role of roles" value="{{role.id}}">{{role.name}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="employee?.get('name')?.hasError('required')">{{message?.FIELD_REQUIRED}}</mat-error>
         </mat-form-field>
       </div>
+      <!-- <div fxLayout="row" fxFlex="50%">
+        <mat-label fxFlex="40%" fxLayoutAlign="start center" class="form-name">designation:</mat-label>
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="name">
+            <mat-option *ngFor = "let item of designations" value="item.id">{{item.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div> -->
+
 
     </div>
   </div>
