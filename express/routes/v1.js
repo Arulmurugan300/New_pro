@@ -11,7 +11,7 @@ router.post('/login', UserAccountController.login);
 router.post('/refreshToken', UserAccountController.refreshToken);
 
 router.get('/getEmployees', passport.authenticate('jwt', { session: false }), EmployeeController.getEmployees);
-router.post('/createEmployee', passport.authenticate('jwt', { session: false }), EmployeeController.createEmployee);
+router.post('/createEmployee', EmployeeController.createEmployee);
 
 router.get('/getDesignation', EmployeeController.getDesignation);
 router.get('/getRole', EmployeeController.getRole);

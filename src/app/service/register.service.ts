@@ -7,9 +7,12 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class RegisterService {
   constructor(private httpservice: HttpsService) { }
-
-  message= new BehaviorSubject<any> (null);
-
+  message= new BehaviorSubject<any>(null);
+  // get designation
+  getDesignation(url:string){
+    return this.httpservice.getMethod('v1/'+ url);
+  }
+  //
   getRole(url: string) {
     console.log('v1' + url);
     return this.httpservice.getMethod('v1/' + url);
@@ -17,7 +20,7 @@ export class RegisterService {
   //message service
   getMessage(){
     this.httpservice.getJson('message.json').subscribe(res=>{
-      console.log("res",res);
+      // console.log("res",res);
       this.message.next(res);
     })
   }

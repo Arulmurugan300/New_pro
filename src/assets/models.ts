@@ -13,3 +13,14 @@ export interface type {
   data: string;
   employee: string;
 }
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
+export interface tableElement {
+  name: string;
+  created: string;
+  modified: string;
+}
