@@ -16,7 +16,7 @@ export class DynamicTableComponent {
   displayedColumns: any = [];
   event!: object;
 
-  ngOnInit() {
+  ngOnChanges() {
     this.dataSource = new MatTableDataSource(this.datapack.value);
     this.displayedColumns = this.datapack.column;
   };
